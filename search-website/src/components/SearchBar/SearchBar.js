@@ -49,7 +49,7 @@ export default function SearchBar(props) {
             if (q === '') {
                 setSuggestions([]);
             } else {
-                axios.post( '/api/suggest', body)
+                axios.post( 'https://fa-search-gocious.azurewebsites.net/api/suggest', body)
                 .then(response => {
                     console.log(JSON.stringify(response.data))
                     setSuggestions(response.data.suggestions);
