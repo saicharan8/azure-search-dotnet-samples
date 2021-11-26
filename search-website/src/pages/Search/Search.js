@@ -37,7 +37,7 @@ export default function Search() {
       filters: filters
     };
 
-    axios.post( '/api/search', body)
+    axios.post( 'https://fa-search-gocious.azurewebsites.net/api/search', body)
       .then(response => {
             //console.log(JSON.stringify(response.data))
             setResults(response.data.results);
